@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from listenclosely.services.base import BaseMessageServiceBackend
-import conf
+from listenclosely_telegram import conf 
 import logging
 from bot import Bot
 
