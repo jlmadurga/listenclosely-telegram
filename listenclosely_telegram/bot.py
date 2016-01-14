@@ -14,7 +14,7 @@ class Bot(TelegramBot):
         while self.listening:
             updates = self.get_updates(offset=self.offset, timeout=self.timeout).wait()
             for update in updates:
-                self.offset = max(self.offset, update.update_id+1)
+                self.offset = max(self.offset, update.update_id+1) if self.offset else update.update_id+1
                 #  TODO: only manage text messages
                 if update.message.text:
                     on_message(update.message)
