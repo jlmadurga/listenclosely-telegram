@@ -2,7 +2,7 @@
 from listenclosely.services.base import BaseMessageServiceBackend
 from listenclosely_telegram import conf 
 import logging
-from bot import Bot
+from listenclosely_telegram.bot import Bot
 
 logger = logging.getLogger(__name__)
 
